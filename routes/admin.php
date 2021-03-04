@@ -10,20 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/admin', function () {
-    return 'hello admin';
+route::group(['namespace'=>'Front'], function (){
+    Route::get('/admin', 'AdminController@showAdminName');
 });
+
+
+
 Route::get('/admin/test1', function () {
     return ' welcome';
 });
 
+
+
 //passing parameters
 
 //mandatory
-Route::get('/test2/{id}', function ($id) {
-    return $id;
-});
+Route::get('login', function () {
+    return View('login');
+}) ->name('login');
 //optional
 //Route::get('/users', function () {
 //    return '$id';
