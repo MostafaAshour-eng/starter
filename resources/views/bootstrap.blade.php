@@ -218,7 +218,7 @@
                 @endforeach
                 @endforeach
             </div>
-           
+
         </div>
         <!--row -->
     </div>
